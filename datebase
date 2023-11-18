@@ -1,0 +1,43 @@
+datebase
+create database library_ms;
+show databases;
+use library_ms;
+create table users(
+id int primary key not null auto_increment,
+name varchar(50),
+password varchar(50),
+email varchar(100),
+contact varchar(50));
+
+ select * from users;
+
+ create table book_details(
+ book_id int primary key auto_increment not null,
+ book_name varchar(250),
+ author varchar(200),
+ quantity int );
+
+
+  select * from book_details;
+
+  create table std_details(
+ student_id int primary key auto_increment not null,
+ student_name varchar(250),
+ branch varchar(200),
+ year varchar(20));
+ 
+  select * from std_details;
+ 
+ create table issue_book(
+ id int primary key auto_increment not null,
+ std_id int,
+ std_name varchar(30),
+ bk_id int,
+ bk_name varchar(30),
+ issue_date date,
+ return_date date,
+ status varchar(30));
+ 
+ select * from issue_book;
+ 
+ 
